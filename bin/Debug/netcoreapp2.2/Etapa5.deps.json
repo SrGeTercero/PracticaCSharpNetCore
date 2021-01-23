@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "Etapa4/1.0.0": {
+      "Etapa5/1.0.0": {
         "runtime": {
-          "Etapa4.dll": {}
+          "Etapa5.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Etapa4/1.0.0": {
+    "Etapa5/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

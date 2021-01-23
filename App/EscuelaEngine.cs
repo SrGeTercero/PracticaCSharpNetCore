@@ -51,7 +51,7 @@ namespace CoreEscuela
                             alumno.Evaluaciones = new List<Evaluaciones>();
                             alumno.Evaluaciones.Add(evaluacion);
                             
-                            Console.WriteLine($"Id evaluación: {evaluacion.UniqueId}, Nombre evaluación: {evaluacion.Nombre}, Alumno: {evaluacion.Alumno.Nombre}, Asignatura: {evaluacion.Asignatura.Nombre}, Nota: {evaluacion.Nota}");
+                            //Console.WriteLine($"Id evaluación: {evaluacion.UniqueId}, Nombre evaluación: {evaluacion.Nombre}, Alumno: {evaluacion.Alumno.Nombre}, Asignatura: {evaluacion.Asignatura.Nombre}, Nota: {evaluacion.Nota}");
                         }                        
                     }   
                 }
