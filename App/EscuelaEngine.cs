@@ -40,7 +40,7 @@ namespace CoreEscuela
                     {
                         for(int i = 0; i < 5; i++){
                             
-                            var evaluacion = new Evaluaciones
+                            var evaluacion = new Evaluación
                             {
                                 Nombre = $"{asignatura.Nombre} Ev#{i+1}", 
                                 Alumno = alumno, 
@@ -48,7 +48,6 @@ namespace CoreEscuela
                                 Nota = (float) rnd.NextDouble() * 5
                             };    
                             
-                            alumno.Evaluaciones = new List<Evaluaciones>();
                             alumno.Evaluaciones.Add(evaluacion);
                             
                             //Console.WriteLine($"Id evaluación: {evaluacion.UniqueId}, Nombre evaluación: {evaluacion.Nombre}, Alumno: {evaluacion.Alumno.Nombre}, Asignatura: {evaluacion.Asignatura.Nombre}, Nota: {evaluacion.Nota}");
