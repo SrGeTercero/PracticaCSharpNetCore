@@ -7,16 +7,16 @@ namespace CoreEscuela.Util
     {
         //las clases estaticas no permiten crear nuevas instacikas
         //ella misma es un objeto.
-        public static void DibujarLinea(int tamaño = 10)
+        public static void DrawLine(int tamaño = 10)
         {
             WriteLine("".PadLeft(tamaño, '='));
         }
         public static void WriteTitle(string titulo)
         {
             var tamaño = titulo.Length + 4;
-            DibujarLinea(tamaño);
+            DrawLine(tamaño);
             WriteLine($"| {titulo} |");
-            DibujarLinea(tamaño);
+            DrawLine(tamaño);
         }
         public static void Pitar(int hz = 2000, int tiempo = 1000, int cantidad = 1)
         {
