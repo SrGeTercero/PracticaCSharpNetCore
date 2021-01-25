@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\German\\Documents\\PLATZI - PROGRA\\Curso CSharp .NET\\Etapa6\\Etapa6.csproj",
-      "projectName": "Etapa6",
-      "projectPath": "C:\\Users\\German\\Documents\\PLATZI - PROGRA\\Curso CSharp .NET\\Etapa6\\Etapa6.csproj",
+      "projectUniqueName": "C:\\Users\\German\\Documents\\PLATZI - PROGRA\\Curso CSharp .NET\\Etapa7\\Etapa7.csproj",
+      "projectName": "Etapa7",
+      "projectPath": "C:\\Users\\German\\Documents\\PLATZI - PROGRA\\Curso CSharp .NET\\Etapa7\\Etapa7.csproj",
       "packagesPath": "C:\\Users\\German\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\German\\Documents\\PLATZI - PROGRA\\Curso CSharp .NET\\Etapa6\\obj\\",
+      "outputPath": "C:\\Users\\German\\Documents\\PLATZI - PROGRA\\Curso CSharp .NET\\Etapa7\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
