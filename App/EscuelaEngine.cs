@@ -24,9 +24,6 @@ namespace CoreEscuela
             CargarCursos(); //aca dentro de la funcio se crean los cursos, luego a cada curso los alumnos...
             CargarAsignaturas(); //luego crea asignaturas y las agrega a cada curso
             CargarEvaluaciones();
-            
-            
-            
         }
 
         private void CargarEvaluaciones()
@@ -105,5 +102,26 @@ namespace CoreEscuela
                 curso.Alumnos = GenerarAlumnosAlAzar(cantidadRandom);
             }
         }
+    
+        public List<ObjetoEscuelaBase> GetObjetoEscuela()
+        {
+            var listaObj = new List<ObjetoEscuelaBase>();
+            listaObj.Add(Escuela);
+            listaObj.AddRange(Escuela.Cursos);
+            
+            foreach (var curso in Escuela.Cursos)
+            {
+                listaObj.AddRange(curso.Asignaturas);
+                listaObj.AddRange(curso.Alumnos);
+
+                foreach (var alumno in curso.Alumnos)
+                {
+                    listaObj.AddRange(alumno.Evaluaciones);
+                }
+            }
+
+            return listaObj;
+        }
+
     }
 }
