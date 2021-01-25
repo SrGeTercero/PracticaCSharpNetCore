@@ -16,6 +16,8 @@ namespace CoreEscuela
             //Printer.Pitar(hz:10000,cantidad:2);
             ImprimirCursosEscuela(engine.Escuela);
             var listaDeObjetos = engine.GetObjetoEscuela();
+
+            engine.Escuela.LimpiarLugar();
         }
 
         private static void ImprimirCursosEscuela(Escuela escuela)
