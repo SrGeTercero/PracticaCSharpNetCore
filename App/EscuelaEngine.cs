@@ -26,7 +26,50 @@ namespace CoreEscuela
             CargarEvaluaciones();
         }
 
-        public List<ObjetoEscuelaBase> GetObjetoEscuela(
+        public IReadOnlyList<ObjetoEscuelaBase> GetObjetoEscuela(
+            bool traeEvaluaciones = true,
+            bool traeAlumnos = true,
+            bool treaAsignaturas = true,
+            bool traeCursos = true)
+        {
+            return GetObjetoEscuela(out int dummy, out dummy, out dummy, out dummy);
+        }
+
+        public IReadOnlyList<ObjetoEscuelaBase> GetObjetoEscuela(
+            out int conteoEvaluaciones,
+            bool traeEvaluaciones = true,
+            bool traeAlumnos = true,
+            bool treaAsignaturas = true,
+            bool traeCursos = true)
+        {
+            return GetObjetoEscuela(out conteoEvaluaciones, out int dummy, out dummy, out dummy);
+        }
+
+        public IReadOnlyList<ObjetoEscuelaBase> GetObjetoEscuela(
+            out int conteoEvaluaciones,
+            out int conteoAlumnos,
+            bool traeEvaluaciones = true,
+            bool traeAlumnos = true,
+            bool treaAsignaturas = true,
+            bool traeCursos = true)
+        {
+            return GetObjetoEscuela(out conteoEvaluaciones, out conteoAlumnos, out int dummy, out dummy);
+        }
+
+        public IReadOnlyList<ObjetoEscuelaBase> GetObjetoEscuela(
+            out int conteoEvaluaciones,
+            out int conteoAlumnos,
+            out int conteoAsignaturas,
+            bool traeEvaluaciones = true,
+            bool traeAlumnos = true,
+            bool treaAsignaturas = true,
+            bool traeCursos = true)
+        {
+            return GetObjetoEscuela(out conteoEvaluaciones, out conteoAlumnos, out conteoAsignaturas, out int dummy);
+        }
+
+
+        public IReadOnlyList<ObjetoEscuelaBase> GetObjetoEscuela(
             out int conteoEvaluaciones,
             out int conteoAlumnos,
             out int conteoAsignaturas,
@@ -66,7 +109,7 @@ namespace CoreEscuela
                 }
             }
 
-            return listaObj;
+            return listaObj.AsReadOnly();
         }
 
         #region Metodos de carga

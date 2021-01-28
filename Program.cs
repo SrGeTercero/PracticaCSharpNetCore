@@ -28,6 +28,9 @@ namespace CoreEscuela
                 false,
                 false
                 );
+
+            
+            
         }
 
         private static void ImprimirCursosEscuela(Escuela escuela)
