@@ -21,23 +21,15 @@ namespace CoreEscuela
             diccionario.Add(10, "German");
             diccionario.Add(23, "Lorem Ipsum");
             
+            Printer.WriteTitle("Acceso a Diccionario");
             foreach (var keyValPair in diccionario)
             {
                 WriteLine($"key: {keyValPair.Key}, value: {keyValPair.Value}");
             }
 
-            Printer.WriteTitle("Acceso a Diccionario");
-            //WriteLine(diccionario[10]);
-            diccionario[1] = "Arturo";
-            WriteLine(diccionario[1]);
+            engine.GetDiccionarioDeObjetos();
 
-            Printer.WriteTitle("Otro diccionario");
-
-            var dic = new Dictionary<string, string>();
-            dic["Luna"]="Satelite natural de la tierra";
-            WriteLine(dic["Luna"]);
-            dic.Add("Luna", "Protagonista de una serie");
-            WriteLine(dic["Luna"]);
+            
         }
 
         private static void ImprimirCursosEscuela(Escuela escuela)
