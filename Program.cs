@@ -14,7 +14,7 @@ namespace CoreEscuela
         {
             AppDomain.CurrentDomain.ProcessExit += AccionDelEvento;
             AppDomain.CurrentDomain.ProcessExit += (o, s) => Printer.Pitar(2000, 1000, 1);
-            AppDomain.CurrentDomain.ProcessExit -= AccionDelEvento;
+            //AppDomain.CurrentDomain.ProcessExit -= AccionDelEvento;
             
             var engine = new EscuelaEngine();
             engine.Inicializar();
@@ -56,13 +56,13 @@ namespace CoreEscuela
             Printer.PresioneENTER();
             notaString = Console.ReadLine();
 
-            if(string.IsNullOrWhiteSpace(notaString))
-            {
-                Printer.WriteTitle("El valor de nota no puede ser vacio");
-                WriteLine("Saliendo del programa");
-            }
-            else
-            {
+            // if(string.IsNullOrWhiteSpace(notaString))
+            // {
+            //     Printer.WriteTitle("El valor de nota no puede ser vacio");
+            //     WriteLine("Saliendo del programa");
+            // }
+            // else
+            // {
                 try
                 {
                     newEval.Nota = float.Parse(notaString);
@@ -71,18 +71,24 @@ namespace CoreEscuela
                         throw new ArgumentOutOfRangeException("La nota debe estar entre 0 y 5");
                     }
                     WriteLine("La nota de la evaluación ha sido ingresado correctamente.");
+                    return;
                 }
                 catch(ArgumentOutOfRangeException argE)
                 {
                     Printer.WriteTitle(argE.Message);
                     WriteLine("Saliendo del programa");
                 }
-                catch (Exception)
+                // catch (Exception)
+                // {
+                //     Printer.WriteTitle("El valor de nota no es un número valido");
+                //     WriteLine("Saliendo del programa");
+                // }
+                finally
                 {
-                    Printer.WriteTitle("El valor de nota no es un número valido");
-                    WriteLine("Saliendo del programa");
+                    Printer.WriteTitle("FINALLY");
+                    Printer.Pitar(2500, 500, 3);
                 }
-            }
+            //}
         }
 
         private static void AccionDelEvento(object sender, EventArgs e)
